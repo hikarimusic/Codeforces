@@ -1,0 +1,56 @@
+ //Codeforces 75C - Modified GCD
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int gcd(int a, int b) {
+    if (b==0) return a ;
+    return gcd(b,a%b) ;
+}
+
+void factorize(int g, vector<int>& v) {
+    for (int i=1;i*i<=g;++i) {
+        if (g%i == 0) {
+            v.push_back(i) ;
+            v.push_back(g/i) ;
+        }
+    }
+    sort(v.begin(),v.end()) ;
+}
+
+int bin_upper(vector<int> v, int bound) {
+    int l=0, h=v.size()-1, m, ans=-1 ;
+    while (l<=h) {
+        m=l+(h-l)/2 ;
+        if (v[m]<=bound) {
+            ans=v[m] ;
+            l=m+1 ;
+        }
+        else h=m-1 ;
+    }
+    return ans ;
+}
+
+int main()
+{
+    int a,b,n ;
+    cin>>a>>b>>n ;
+    int g=gcd(a,b) ;
+    vector<int> factor ;
+    factorize(g,factor) ;
+    while (n--) {
+        int low, high, sup ;
+        cin>>low>>high ;
+        sup=bin_upper(factor,high) ;
+        if (sup>=low) {
+            cout<<sup<<'\n' ;
+        }
+        else {
+            cout<<-1<<'\n' ;
+        }
+    }
+    return 0;
+}
