@@ -9,7 +9,7 @@ ll gcd (ll a, ll b) {
     return b ? gcd(b,a%b) : a ;
 }
 
-ll enf (ll n) {
+ll etf (ll n) {
     ll ans=n ;
     for (ll i=2;i*i<=n;++i) {
         if (n%i==0) {
@@ -31,7 +31,7 @@ int main()
         ll a, m, g ;
         cin>>a>>m ;
         g=gcd(a,m) ;
-        cout<<enf(m/g)<<'\n' ;
+        cout<<etf(m/g)<<'\n' ;
     }
     return 0;
 }
