@@ -1,0 +1,37 @@
+//Codeforces 1295D - Same GCDs
+
+#include <iostream>
+
+using namespace std;
+typedef long long ll ;
+
+ll gcd (ll a, ll b) {
+    return b ? gcd(b,a%b) : a ;
+}
+
+ll enf (ll n) {
+    ll ans=n ;
+    for (ll i=2;i*i<=n;++i) {
+        if (n%i==0) {
+            ans-=ans/i ;
+            while (n%i==0) n/=i ;
+        }
+    }
+    if (n>1) {
+        ans-=ans/n ;
+    }
+    return ans ;
+}
+
+int main()
+{
+    int T ;
+    cin>>T ;
+    for (int i=0;i<T;++i) {
+        ll a, m, g ;
+        cin>>a>>m ;
+        g=gcd(a,m) ;
+        cout<<enf(m/g)<<'\n' ;
+    }
+    return 0;
+}
