@@ -1,0 +1,57 @@
+//Codeforces 687B - Remainders Game
+
+#include <bits/stdc++.h>
+
+using namespace std;
+#define c_max 1000000
+
+void lin_sieve(vector<int>& lp) {
+    int N=c_max ;
+    vector<int> pr ;
+    for (int i=2;i<=N;++i) {
+        if (lp[i]==0) {
+            lp[i]=i ;
+            pr.push_back(i) ;
+        }
+        for (int j=0;j<pr.size() && pr[j]<=lp[i] && i*pr[j]<=N;++j) {
+            lp[i*pr[j]]=pr[j] ;
+        }
+    }
+}
+
+int main()
+{
+    int n,k ;
+    scanf("%d %d",&n,&k) ;
+    vector<int> lp(c_max+5,0) ;
+    lin_sieve(lp) ;
+    vector<int> c_fac(c_max+5,0) ;
+    for (int i=0;i<n;++i) {
+        int c,p,q ;
+        scanf("%d",&c) ;
+        while (c>1) {
+            p=lp[c] ;
+            q=0 ;
+            while (c%p==0) {
+                q+=1 ;
+                c/=p ;
+            }
+            c_fac[p]= (q>c_fac[p]) ? q : c_fac[p] ;
+        }
+    }
+    int p,q,ans=1 ;
+    while (k>1) {
+        p=lp[k] ;
+        q=0 ;
+        while (k%p==0) {
+            q+=1 ;
+            k/=p ;
+        }
+        if (q>c_fac[p]) {
+            ans=0 ;
+            break ;
+        }
+    }
+    printf("%s",(ans?"Yes":"No")) ;
+    return 0;
+}
