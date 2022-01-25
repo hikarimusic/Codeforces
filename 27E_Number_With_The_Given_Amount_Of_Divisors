@@ -6,7 +6,6 @@ using namespace std;
 #define n_max 1000
 #define p_max 10
 #define lim 1e18
-#define lim2 1e9
 
 ll dp[n_max+5][p_max+5], n ;
 ll pr[p_max+5]={0,2,3,5,7,11,13,17,19,23,29,31,37,41,43} ;
