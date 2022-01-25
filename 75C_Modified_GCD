@@ -1,56 +1,49 @@
- //Codeforces 75C - Modified GCD
+//Codeforces 75C - Modified GCD
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
+#define ll long long
 
-int gcd(int a, int b) {
-    if (b==0) return a ;
-    return gcd(b,a%b) ;
+ll gcd(ll a,ll b) {
+    return b ? gcd(b,a%b) : a ;
 }
 
-void factorize(int g, vector<int>& v) {
+void factorize(vector<ll>& fac, ll g) {
     for (int i=1;i*i<=g;++i) {
-        if (g%i == 0) {
-            v.push_back(i) ;
-            v.push_back(g/i) ;
+        if (g%i==0) {
+            fac.push_back(i) ;
+            fac.push_back(g/i) ;
         }
     }
-    sort(v.begin(),v.end()) ;
+    sort(fac.begin(),fac.end()) ;
 }
 
-int bin_upper(vector<int> v, int bound) {
-    int l=0, h=v.size()-1, m, ans=-1 ;
+ll search(vector<ll> fac, ll low, ll high) {
+    ll l=0, h=fac.size()-1, ans=-1 ;
     while (l<=h) {
-        m=l+(h-l)/2 ;
-        if (v[m]<=bound) {
-            ans=v[m] ;
+        ll m=l+(h-l)/2 ;
+        if (fac[m]>high) h=m-1 ;
+        else {
+            ans=fac[m] ;
             l=m+1 ;
         }
-        else h=m-1 ;
     }
-    return ans ;
+    if (ans>=low) return ans ;
+    return -1 ;
 }
 
 int main()
 {
-    int a,b,n ;
-    cin>>a>>b>>n ;
-    int g=gcd(a,b) ;
-    vector<int> factor ;
-    factorize(g,factor) ;
-    while (n--) {
-        int low, high, sup ;
-        cin>>low>>high ;
-        sup=bin_upper(factor,high) ;
-        if (sup>=low) {
-            cout<<sup<<'\n' ;
-        }
-        else {
-            cout<<-1<<'\n' ;
-        }
+    ll a,b,n,low,high,g ;
+    vector<ll> fac ;
+    scanf("%lld %lld",&a,&b) ;
+    g=gcd(a,b) ;
+    factorize(fac,g) ;
+    scanf("%lld",&n) ;
+    for (int i=0;i<n;++i) {
+        scanf("%lld %lld",&low,&high) ;
+        printf("%lld\n",search(fac,low,high)) ;
     }
     return 0;
 }
