@@ -1,10 +1,8 @@
 //Codeforces 300C - Beautiful Numbers
 
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
-typedef long long ll ;
+#define ll long long
 #define mod 1000000007
 #define n_max 1000000
 
@@ -42,13 +40,13 @@ int main()
     vector<ll> fac(n_max+5,1) ;
     cal_fac(fac) ;
     ll a,b,n, ans=0 ;
-    cin>>a>>b>>n ;
+    scanf("%lld %lld %lld",&a,&b,&n) ;
     for (ll i=0;i<=n;++i) {
         if (is_good(i*a+(n-i)*b, a, b)) {
             ans+=fac[n]*inv(fac[n-i]*fac[i]%mod) % mod ;
             ans%=mod ;
         }
     }
-    cout<<ans ;
+    printf("%lld",ans) ;
     return 0;
 }
