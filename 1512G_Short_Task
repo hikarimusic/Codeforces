@@ -1,13 +1,15 @@
 //Codeforces 1512G - Short Task
 
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 #define c_max 10000000
 
-void lin_sieve(vector<int>& lp) {
-    int N=10000000 ;
+vector<int> lp(c_max+5,0) ;
+vector<int> sum(c_max+5,1) ;
+vector<int> ans(c_max+5,-1) ;
+
+void lin_sieve() {
+    int N=c_max ;
     vector<int> pr ;
     for (int i=2;i<=N;++i) {
         if (lp[i]==0) {
@@ -20,8 +22,8 @@ void lin_sieve(vector<int>& lp) {
     }
 }
 
-void cal_sum(vector<int>& sum, vector<int>& lp) {
-    int N=10000000 ;
+void cal_sum() {
+    int N=c_max;
     for (int i=2;i<=N;++i) {
         int j=i ;
         while (j%lp[i]==0) {
@@ -32,26 +34,24 @@ void cal_sum(vector<int>& sum, vector<int>& lp) {
     }
 }
 
-void cal_ans(vector<int>& ans, vector<int>& sum) {
-    for (int i=10000000;i>0;--i) {
-        if (sum[i]<=10000000) ans[sum[i]]=i ;
+void cal_ans() {
+    int N=c_max ;
+    for (int i=N;i>0;--i) {
+        if (sum[i]<=N) ans[sum[i]]=i ;
     }
 }
 
 int main()
 {
-    vector<int> lp(c_max+5,0) ;
-    lin_sieve(lp) ;
-    vector<int> sum(c_max+5,1) ;
-    cal_sum(sum,lp) ;
-    vector<int> ans(c_max+5,-1) ;
-    cal_ans(ans,sum) ;
+    lin_sieve() ;
+    cal_sum() ;
+    cal_ans() ;
     int t ;
-    cin>>t ;
+    scanf("%d",&t) ;
     for (int i=0;i<t;++i) {
         int c ;
-        cin>>c ;
-        cout<<ans[c]<<'\n' ;
+        scanf("%d",&c) ;
+        printf("%d\n",ans[c]) ;
     }
     return 0;
 }
