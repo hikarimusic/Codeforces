@@ -1,9 +1,8 @@
 //Codeforces 584D - Dima and Lisa
 
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-typedef long long ll ;
+#define ll long long
 
 bool is_prime(ll n) {
     for (int i=2;i*i<=n;++i) {
@@ -15,10 +14,10 @@ bool is_prime(ll n) {
 int main()
 {
     ll n ;
-    cin>>n ;
-    if (is_prime(n)) cout<<1<<'\n'<<n ;
-    else if (is_prime(n-2)) cout<<2<<'\n'<<n-2<<' '<<2 ;
-    else if (is_prime(n-4)) cout<<3<<'\n'<<n-4<<' '<<2<<' '<<2 ;
+    scanf("%lld",&n) ;
+    if (is_prime(n)) printf("1\n%lld",n) ;
+    else if (is_prime(n-2)) printf("2\n%lld 2",n-2) ;
+    else if (is_prime(n-4)) printf("3\n%lld 2 2",n-4) ;
     else {
         ll a=n-6, b=3 ;
         while (a){
@@ -27,7 +26,7 @@ int main()
         }
         while (b) {
             if (is_prime(b) && is_prime(n-a-b)) {
-                cout<<3<<'\n'<<a<<' '<<b<<' '<<n-a-b ;
+                printf("3\n%lld %lld %lld",a,b,n-a-b) ;
                 break ;
             }
             b+=2 ;
@@ -35,4 +34,3 @@ int main()
     }
     return 0;
 }
-
