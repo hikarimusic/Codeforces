@@ -1,10 +1,8 @@
 //Codeforces 1117D - Magic Gems
 
-
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-typedef long long ll ;
+#define ll long long
 #define mod 1000000007 ;
 
 void mat_init(ll A[100][100], ll M) {
@@ -62,12 +60,11 @@ void mat_pow(ll A[100][100], ll n) {
 
 int main()
 {
-    
     ll N, M ;
-    cin>>N>>M ;
+    scanf("%lld %lld",&N,&M) ;
     ll A[100][100] ;
     mat_init(A,M) ;
     mat_pow(A,N) ;
-    cout<<A[0][0] ;
+    printf("%lld",A[0][0]) ;
     return 0;
 }
