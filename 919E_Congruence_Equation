@@ -1,9 +1,8 @@
 //Codeforces 919E - Congruence Equation
 
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-typedef long long ll ;
+#define ll long long
 
 ll exgcd(ll a, ll b, ll& x, ll& y) {
     if (b==0) {
@@ -20,9 +19,9 @@ ll exgcd(ll a, ll b, ll& x, ll& y) {
 
 int main()
 {
-    ll a,b,p,x, ans=0 ;
-    cin>>a>>b>>p>>x ;
-    ll a0=1 ;
+    ll a,b,p,x ;
+    scanf("%lld %lld %lld %lld",&a,&b,&p,&x) ;
+    ll ans=0, a0=1 ;
     for (ll i=1;i<=p-1;++i) {
         a0=a0*a%p ;
         ll t=i*a0%p ;
@@ -35,7 +34,6 @@ int main()
         if (k==0) k=p ;
         if (r>=k) ans += 1+(r-k)/p ;
     }
-    cout<<ans ;
+    printf("%lld",ans) ;
     return 0;
 }
-
