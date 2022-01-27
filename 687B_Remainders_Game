@@ -1,13 +1,13 @@
 //Codeforces 687B - Remainders Game
 
 #include <bits/stdc++.h>
-
 using namespace std;
 #define c_max 1000000
 
-void lin_sieve(vector<int>& lp) {
-    int N=c_max ;
-    vector<int> pr ;
+vector<int> lp(c_max+5,0) ;
+vector<int> pr ;
+
+void lin_sieve(int N) {
     for (int i=2;i<=N;++i) {
         if (lp[i]==0) {
             lp[i]=i ;
@@ -21,37 +21,31 @@ void lin_sieve(vector<int>& lp) {
 
 int main()
 {
-    int n,k ;
+    lin_sieve(c_max) ;
+    int n,k,c ;
     scanf("%d %d",&n,&k) ;
-    vector<int> lp(c_max+5,0) ;
-    lin_sieve(lp) ;
-    vector<int> c_fac(c_max+5,0) ;
-    for (int i=0;i<n;++i) {
-        int c,p,q ;
+    vector<int> fac(c_max+5,0) ;
+    for (int t=0;t<n;++t) {
         scanf("%d",&c) ;
         while (c>1) {
-            p=lp[c] ;
-            q=0 ;
+            int p=lp[c] ;
+            int q=0 ;
             while (c%p==0) {
-                q+=1 ;
+                ++q ;
                 c/=p ;
             }
-            c_fac[p]= (q>c_fac[p]) ? q : c_fac[p] ;
+            if (q>fac[p]) fac[p]=q ;
         }
     }
-    int p,q,ans=1 ;
+    bool ans=1 ;
     while (k>1) {
-        p=lp[k] ;
-        q=0 ;
-        while (k%p==0) {
-            q+=1 ;
-            k/=p ;
-        }
-        if (q>c_fac[p]) {
+        --fac[lp[k]] ;
+        if (fac[lp[k]]<0) {
             ans=0 ;
             break ;
         }
+        k/=lp[k] ;
     }
-    printf("%s",(ans?"Yes":"No")) ;
+    printf("%s",ans?"Yes":"No") ;
     return 0;
 }
