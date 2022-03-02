@@ -42,4 +42,3 @@ int main() {
 	}
 	printf("%d",ans) ;
 }
-
