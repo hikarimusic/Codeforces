@@ -1,3 +1,5 @@
+//Codeforces 112A - Petya and Strings
+
 #include <bits/stdc++.h>
 using namespace std ;
 
