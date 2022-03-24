@@ -1,5 +1,3 @@
-//Codeforces 474F - Ant colony
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 100005
