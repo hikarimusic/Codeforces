@@ -1,5 +1,3 @@
-//Codeforces 10C - Digital Root
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
