@@ -1,5 +1,3 @@
-//Codeforces 58A - Chat room 
-
 #include <bits/stdc++.h>
 using namespace std ;
 
