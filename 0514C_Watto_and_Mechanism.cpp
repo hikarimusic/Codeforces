@@ -1,5 +1,3 @@
-//Codeforces 514C - Watto and Mechanism
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
