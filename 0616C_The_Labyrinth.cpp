@@ -1,5 +1,3 @@
-//Codeforces 616C - The Labyrinth
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 1000 
