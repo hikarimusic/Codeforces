@@ -1,5 +1,3 @@
-//Codeforces 131A - cAPS lOCK 
-
 #include <bits/stdc++.h>
 using namespace std ;
 
