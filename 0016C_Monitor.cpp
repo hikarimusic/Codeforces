@@ -1,5 +1,3 @@
-//Codeforces 16C - Monitor
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
