@@ -1,5 +1,3 @@
-//Codeforces 1B - Spreadsheets
-
 #include <bits/stdc++.h>
 using namespace std;
 
