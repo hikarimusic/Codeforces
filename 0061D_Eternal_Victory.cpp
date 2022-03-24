@@ -1,5 +1,3 @@
-//Codeforces 61D - Eternal Victory
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
