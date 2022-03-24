@@ -1,5 +1,3 @@
-//Codeforces 300C - Beautiful Numbers
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
