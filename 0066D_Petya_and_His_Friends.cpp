@@ -1,5 +1,3 @@
-//Codeforces 66D - Petya and His Friends
-
 #include <bits/stdc++.h>
 using namespace std;
 
