@@ -1,5 +1,3 @@
-//Codeforces 34D - Road Map
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 50000
