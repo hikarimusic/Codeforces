@@ -1,5 +1,3 @@
-//Codeforces 954D - Fight Against Traffic
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 1000
