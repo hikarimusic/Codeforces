@@ -1,5 +1,3 @@
-//Codeforces 1025B - Weakened Common Divisor
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
