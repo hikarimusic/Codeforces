@@ -1,5 +1,3 @@
-//Codeforces 111B - Petya and Divisors
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 100000
