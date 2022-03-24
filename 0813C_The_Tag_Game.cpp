@@ -1,5 +1,3 @@
-//Codeforces 813C - The Tag Game
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 200000
