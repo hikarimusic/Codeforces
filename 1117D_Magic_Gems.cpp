@@ -1,5 +1,3 @@
-//Codeforces 1117D - Magic Gems
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
