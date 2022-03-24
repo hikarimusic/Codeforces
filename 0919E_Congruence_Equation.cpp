@@ -1,5 +1,3 @@
-//Codeforces 919E - Congruence Equation
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
