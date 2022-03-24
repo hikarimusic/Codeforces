@@ -1,5 +1,3 @@
-//Codeforces 20C - Dijkstra?
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 100000
