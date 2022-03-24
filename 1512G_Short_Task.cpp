@@ -1,5 +1,3 @@
-//Codeforces 1512G - Short Task
-
 #include <bits/stdc++.h>
 using namespace std;
 #define c_max 10000000
