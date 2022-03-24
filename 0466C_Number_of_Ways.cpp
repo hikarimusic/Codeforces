@@ -1,5 +1,3 @@
-//Codeforces 466C - Number of Ways
-
 #include <bits/stdc++.h>
 using namespace std ;
 #define ll long long
