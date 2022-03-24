@@ -1,5 +1,3 @@
-//Codeforces 500A - New Year Transportation
-
 #include <bits/stdc++.h>
 using namespace std ;
 #define MAXN 30005
