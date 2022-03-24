@@ -1,5 +1,3 @@
-//Codeforces 25D - Roads in Berland
-
 #include <bits/stdc++.h>
 using namespace std ;
 #define MAXN 305
