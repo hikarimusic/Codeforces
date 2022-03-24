@@ -1,5 +1,3 @@
-//Codeforces 584D - Dima and Lisa
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
