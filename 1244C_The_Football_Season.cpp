@@ -1,5 +1,3 @@
-//Codeforces 1244C - The Football Season
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
