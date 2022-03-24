@@ -1,5 +1,3 @@
-//Codeforces 793B - Igor and his way to work
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 1000
