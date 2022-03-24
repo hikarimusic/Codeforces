@@ -1,5 +1,3 @@
-//Codeforces 1037D - Valid BFS?
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 200000
