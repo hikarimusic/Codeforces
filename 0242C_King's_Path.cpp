@@ -1,5 +1,3 @@
-//Codeforces 242C - King's Path
-
 #include <bits/stdc++.h>
 using namespace std;
 
