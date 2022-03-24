@@ -1,5 +1,3 @@
-//Codeforces 722C - Destroying Array
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 100005
