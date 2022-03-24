@@ -1,5 +1,3 @@
-//Codeforces 27E - Number With The Given Amount Of Divisors
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll unsigned long long
