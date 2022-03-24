@@ -1,5 +1,3 @@
-//Codeforces 380C - Sereja and Brackets
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 1000005
