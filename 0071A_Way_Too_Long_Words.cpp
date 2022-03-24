@@ -1,5 +1,3 @@
-//Codeforces 71A - Way Too Long Words
-
 #include <bits/stdc++.h>
 using namespace std ;
 
