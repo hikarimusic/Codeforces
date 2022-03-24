@@ -1,5 +1,3 @@
-//Codeforces 281A - Word Capitalization
-
 #include <bits/stdc++.h>
 using namespace std ;
 
