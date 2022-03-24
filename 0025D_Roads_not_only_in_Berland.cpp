@@ -1,5 +1,3 @@
-//Codeforces 25D - Roads not only in Berland
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 1000
