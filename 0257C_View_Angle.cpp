@@ -1,5 +1,3 @@
-//Codeforces 257C - View Angle
-
 #include <bits/stdc++.h>
 using namespace std;
 #define PI acos(-1)
