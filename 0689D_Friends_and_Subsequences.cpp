@@ -1,5 +1,3 @@
-//Codeforces 689D - Friends and Subsequences
-
 #include <bits/stdc++.h>
 using namespace std;
 #define nmax 200005
