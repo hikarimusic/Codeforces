@@ -1,5 +1,3 @@
-//Codeforces 687B - Remainders Game
-
 #include <bits/stdc++.h>
 using namespace std;
 #define c_max 1000000
