@@ -1,5 +1,3 @@
-//Codeforces 1C - Ancient Berland Circus
-
 #include <bits/stdc++.h>
 using namespace std;
 #define PI acos(-1)
