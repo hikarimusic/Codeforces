@@ -1,5 +1,3 @@
-//Codeforces 520B - Two Buttons
-
 #include <bits/stdc++.h>
 using namespace std ;
 
