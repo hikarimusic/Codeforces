@@ -1,5 +1,3 @@
-//Codeforces 780C - Andryusha and Colored Balloons
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 200000
