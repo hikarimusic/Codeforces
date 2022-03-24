@@ -1,5 +1,3 @@
-//Codeforces 140A - New Year Table
-
 #include <bits/stdc++.h>
 using namespace std;
 #define PI acos(-1)
