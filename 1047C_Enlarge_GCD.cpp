@@ -1,5 +1,3 @@
-//Codeforces 1047C - Enlarge GCD
-
 #include <bits/stdc++.h>
 using namespace std;
 #define n_max 300000 
