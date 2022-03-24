@@ -1,5 +1,3 @@
-//Codeforces 580C - Kefa and Park
-
 #include <bits/stdc++.h>
 using namespace std ;
 #define MAXN 100005
