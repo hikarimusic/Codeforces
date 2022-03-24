@@ -1,5 +1,3 @@
-//Codeforces 117B - Very Interesting Game
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
