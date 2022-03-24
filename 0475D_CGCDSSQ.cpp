@@ -1,5 +1,3 @@
-//Codeforces 475D - CGCDSSQ
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
