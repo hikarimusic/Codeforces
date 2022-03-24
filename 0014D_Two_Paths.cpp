@@ -1,5 +1,3 @@
-//Codeforces 14D - Two Paths
-
 #include <bits/stdc++.h>
 using namespace std ;
 #define MAXN 205
