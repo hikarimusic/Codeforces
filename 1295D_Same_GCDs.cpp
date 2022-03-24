@@ -1,5 +1,3 @@
-//Codeforces 1295D - Same GCDs
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
