@@ -1,5 +1,3 @@
-//Codeforces 877E - Danil and a Part-time Job
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 200005
