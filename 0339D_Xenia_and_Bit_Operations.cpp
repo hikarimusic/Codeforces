@@ -1,5 +1,3 @@
-//Codeforces 339D - Xenia and Bit Operations
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 1000000
